@@ -155,6 +155,7 @@
 }
 .navbar-nav{
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 .nav-link{
@@ -166,6 +167,10 @@
 .nav-link:hover{
     color: rgb(0, 72, 255);
     transition: all 0.5s;
+}
+.cart{
+    font-size:x-large;
+    margin-bottom: 15%;
 }
 /* navbar */
 
@@ -254,8 +259,11 @@
     color: white;
 }
 /* footer */
-
 /* dashboard page end */
+
+/* cart page start */
+
+/* cart page start */
 
 @media(max-width:550px){
     .footer{

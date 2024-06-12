@@ -5,9 +5,9 @@ function donebtn(){
     var username = document.getElementById('username')
     var email = document.getElementById('email')
     var password = document.getElementById('password')
-    localStorage.setItem('name',username.value) 
-    localStorage.setItem('email',email.value)
-    localStorage.setItem('password',password.value)
+    localStorage.setItem(`name`,username.value) 
+    localStorage.setItem(`email`,email.value)
+    localStorage.setItem(`password`,password.value)
     alert('Account Created ✅')
     username.value = ''
     email.value = ''
@@ -35,3 +35,11 @@ loginbtn.addEventListener('click',()=>{
 accountbtn.addEventListener('click',()=>{
     window.location.href = 'account.html'
 })
+
+function cartbtn() {
+ window.open('cart.html')
+}
+
+function home() {
+    window.open('dashboard.html')
+}
