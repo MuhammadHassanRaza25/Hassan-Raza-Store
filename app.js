@@ -5,7 +5,7 @@ function donebtn(){
     var username = document.getElementById('username')
     var email = document.getElementById('email')
     var password = document.getElementById('password')
-    localStorage.setItem('name',username.value)
+    localStorage.setItem('name',username.value) 
     localStorage.setItem('email',email.value)
     localStorage.setItem('password',password.value)
     alert('Account Created ✅')

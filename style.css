@@ -1,6 +1,6 @@
 /* login page start */
 #loginBody{
-    background-color: #F5F8FA; 
+    background-color: #f4f4f4; 
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -9,10 +9,11 @@
 }
 .loginHeading{
     font-size: 40px;
+    color: rgb(38, 38, 247) ;
 }
 .loginForm{
     background-color: white;
-    border: 1px solid #AAB8C2;
+    border: 1px solid rgb(38, 38, 247);
     width: 420px;
     height: 70vh;
     text-align: center;
@@ -32,7 +33,7 @@
 }
 .inpDiv input:focus{
     outline: none;
-    border: 1px solid rgb(124, 216, 253);
+    border: 1px solid rgb(38, 38, 247) !important;
 }
 .loginbtn{
     padding: 12px;
@@ -43,16 +44,16 @@
     border-radius: 20px;
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: black;
+    background-color: rgb(38, 38, 247);
     color: white;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid white;
     transition: all 0.5s;
 }
 .loginbtn:hover{
     background-color: white;
-    color: black;
-    border: 1px solid #AAB8C2;
+    color: rgb(38, 38, 247);
+    border: 1px solid rgb(38, 38, 247);
     transition: all 0.5s;
 }
 .accountbtn{
@@ -64,22 +65,22 @@
     border-radius: 20px;
     margin-top: 2%;
     background-color: white;
-    color: black;
-    border: 1px solid #AAB8C2;
+    color: rgb(38, 38, 247);
+    border: 1px solid rgb(38, 38, 247);
     cursor: pointer;
     transition: all 0.5s;
 }
 .accountbtn:hover{
-    background-color: black;
+    background-color: rgb(38, 38, 247);
     color: white;
-    border: 1px solid black;
+    border: 1px solid white;
     transition: all 0.5s;
 }
 /* login page end */
 
 /* account page start */
 #accountbody{
-    background-color: #F5F8FA; 
+    background-color: #f4f4f4; 
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -88,10 +89,11 @@
 }
 .accountHeading{
     font-size: 40px;
+    color: rgb(38, 38, 247) ;
 }
 .accountForm{
     background-color: white;
-    border: 1px solid #AAB8C2;
+    border: 1px solid rgb(38, 38, 247);
     width: 420px;
     height: 70vh;
     text-align: center;
@@ -122,16 +124,16 @@
     border-radius: 20px;
     margin-top: 2%;
     margin-bottom: 2%;
-    background-color: black;
+    background-color: rgb(38, 38, 247) ;
     color: white;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid white;
     transition: all 0.5s;
 }
 .donebtn:hover{
     background-color: white;
-    color: black;
-    border: 1px solid #AAB8C2;
+    color: rgb(38, 38, 247) ;
+    border: 1px solid rgb(38, 38, 247) ;
     transition: all 0.5s;
 }
 /* account page end */
@@ -190,16 +192,18 @@
 .card:hover{
     border-color: rgb(0, 72, 255);
 }
-.card img{
-    height: 400px;
-    width: 100%;
+.card img{   
+    height: 220px;
+    width: 220px;
+    margin-left: 10%;
 }
 /* card */
 
 /* footer */
 .footer{
     padding: 40px;
-    background-color: rgb(44, 103, 251);
+    background-color: rgb(61, 115, 250);
+    border-top: 2px solid #AAB8C2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -208,7 +212,7 @@
 }
 .aboutus h2{
     color: white;
-    font-size: 50px;
+    font-size: 40px;
 }
 .aboutus p{
     color: white;
@@ -216,11 +220,11 @@
 }
 .followus h2{
     color: white;
-    font-size: 50px;
+    font-size: 40px;
 }
 .followus a{
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 10%;
     transition: all 0.5s;
 }
@@ -238,12 +242,12 @@
 }
 .contactus h2{
     color: white;
-    font-size: 50px;
+    font-size: 40px;
 }
 .contactus h3{
     text-align: center;
     color: white;
-    font-size: 35px;
+    font-size: 25px;
     margin-top: 8%;
 }
 #copyright{
