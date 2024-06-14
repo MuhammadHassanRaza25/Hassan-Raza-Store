@@ -32,14 +32,13 @@ loginbtn.addEventListener('click',()=>{
     }
 })
 
+
 accountbtn.addEventListener('click',()=>{
     window.location.href = 'account.html'
 })
 
-function cartbtn() {
- window.open('cart.html')
+var logoutbtn = document.getElementById('logoutbtn')
+function logoutbtn(){
+     window.location.href = 'index.html'
 }
 
-function home() {
-    window.open('dashboard.html')
-}
