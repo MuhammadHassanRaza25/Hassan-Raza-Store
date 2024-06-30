@@ -30,12 +30,12 @@
                 <a class="nav-link" href="#contactus">Contact Us</a>
               </li>
               <li>
-                <select id="dropdown" class="select">
+                <select id="select" class="select">
                   <option disabled selected>Select Category</option>
                 </select>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><button class="logoutbtn" onclick="logoutbtn()">Logout</button></a>
+                <a class="nav-link" href="#"><button class="logoutbtn" id="logoutbtn">Logout</button></a>
               </li>
             </ul>
           </div>
@@ -70,160 +70,19 @@
   <!--------------- cards start ----------------->
     <h1 class="cardheading" data-aos="zoom-in">Latest <span class="text-primary">Products</span></h1>
     <hr class="w-25 text-primary m-auto mb-5 mt-3">
-   <div class="cardP" data-aos="fade-up">
-      <!-- card 1 -->
-      <div class="card">
-          <div class="card-body">
-            <img src="images/wimg.jpg" class="img-fluid rounded mb-3" alt="">
-            <h4 class="card-title">Rs 1,000</h4>
-            <p class="card-text">TIMEWEAR Analog Blue Roman Dial Brown Strap Watch for Men</p>
-            <p style="font-weight: bold; color: gray;">Delivered in 3-4 Days</p>
-            <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-            <a href="#" class="btn btn-primary">Buy Now</a>
-          </div>
-        </div>   
+   <div id="cardsDiv" class="cardP" data-aos="fade-up">
 
-        <!-- card 2 -->
-      <div class="card">
-        <div class="card-body">
-          <img src="images/mouse img.jpg" class="img-fluid rounded mb-3" alt="">
-          <h4 class="card-title">Rs 1,250 </h4>
-          <p class="card-text">Logitech | B100 - Optical USB mouse you can work comfortably</p>
-          <p style="font-weight: bold; color: gray;">Delivered in 1-3 Days</p>
-          <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>  
-
-       <!-- card 3 -->
-       <div class="card">
-        <div class="card-body">
-          <img src="images/shoes img.webp" class="img-fluid rounded mb-3" alt="">
-          <h5 class="card-title">Rs 1,200 </h5>
-          <p class="card-text">Sport Shoes comfortable , Breathable  fly knit upper super soft.</p>
-          <p style="font-weight: bold; color: gray;">Delivered in 3-4 Days</p>
-          <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>  
-
-       <!-- card 4 -->
-       <div class="card">
-        <div class="card-body">
-          <img src="images/headset img.jpg" class="img-fluid rounded mb-3" alt="">
-          <h5 class="card-title">Rs 2,000 </h5>
-          <p class="card-text">Boost Pulse Bluetooth Headphone Gaming Headphones.</p>
-          <p style="font-weight: bold; color: gray;">Delivered in 2-5 Days</p>
-          <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>  
+    <div class="card">
+      <img src="images/shoes img.webp" alt="image">
+      <h5 class="cardTitle">Title title title</h5>
+      <div class="cardText">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non rerum amet in. Esse, totam iusto, et suscipit ducimus officia voluptatem, distinctio placeat sapiente ipsam dolor ad. Assumenda, laborum quis! Illumcxxxxxxxxxxxxxxxxxxxxxxxxxxxxxgvdfgtrrrrrrrrrrrrrrrrrryttyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy.</p>
+      </div>
+      <h4>Price: 200.0 <span class="cardSpan"><i class="bi bi-star-fill"></i> 2.25</span></h4>
+      <button class="cartbtn" id="cartbtn">Add to Cart</button>
+    </div>
 
   </div>
-
-  <!-- 2nd row  start
-  <div class="cardP" data-aos="fade-up">
-    card 1
-    <div class="card">
-        <div class="card-body">
-          <img src="images/wimg.jpg" class="img-fluid rounded mb-3" alt="">
-          <h4 class="card-title">Rs 1,000</h4>
-          <p class="card-text">TIMEWEAR Analog Blue Roman Dial Brown Strap Watch for Men</p>
-          <p style="font-weight: bold; color: gray;">Delivered in 3-4 Days</p>
-          <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>   
-
-      card 2
-    <div class="card">
-      <div class="card-body">
-        <img src="images/mouse img.jpg" class="img-fluid rounded mb-3" alt="">
-        <h4 class="card-title">Rs 1,250 </h4>
-        <p class="card-text">Logitech | B100 - Optical USB mouse you can work comfortably</p>
-        <p style="font-weight: bold; color: gray;">Delivered in 1-3 Days</p>
-        <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-        <a href="#" class="btn btn-primary">Buy Now</a>
-      </div>
-    </div>  
-
-     card 3
-     <div class="card">
-      <div class="card-body">
-        <img src="images/shoes img.webp" class="img-fluid rounded mb-3" alt="">
-        <h5 class="card-title">Rs 1,200 </h5>
-        <p class="card-text">Sport Shoes comfortable , Breathable  fly knit upper super soft.</p>
-        <p style="font-weight: bold; color: gray;">Delivered in 3-4 Days</p>
-        <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-        <a href="#" class="btn btn-primary">Buy Now</a>
-      </div>
-    </div>  
-
-     card 4
-     <div class="card">
-      <div class="card-body">
-        <img src="images/headset img.jpg" class="img-fluid rounded mb-3" alt="">
-        <h5 class="card-title">Rs 2,000 </h5>
-        <p class="card-text">Boost Pulse Bluetooth Headphone Gaming Headphones.</p>
-        <p style="font-weight: bold; color: gray;">Delivered in 2-5 Days</p>
-        <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-        <a href="#" class="btn btn-primary">Buy Now</a>
-      </div>
-    </div>  
-
-</div>
-
-3rd row start
-<div class="cardP" data-aos="fade-up">
-  card 1
-  <div class="card">
-      <div class="card-body">
-        <img src="images/wimg.jpg" class="img-fluid rounded mb-3" alt="">
-        <h4 class="card-title">Rs 1,000</h4>
-        <p class="card-text">TIMEWEAR Analog Blue Roman Dial Brown Strap Watch for Men</p>
-        <p style="font-weight: bold; color: gray;">Delivered in 3-4 Days</p>
-        <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-        <a href="#" class="btn btn-primary">Buy Now</a>
-      </div>
-    </div>   
-
-    card 2
-  <div class="card">
-    <div class="card-body">
-      <img src="images/mouse img.jpg" class="img-fluid rounded mb-3" alt="">
-      <h4 class="card-title">Rs 1,250 </h4>
-      <p class="card-text">Logitech | B100 - Optical USB mouse you can work comfortably</p>
-      <p style="font-weight: bold; color: gray;">Delivered in 1-3 Days</p>
-      <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-      <a href="#" class="btn btn-primary">Buy Now</a>
-    </div>
-  </div>  
-
-   card 3
-   <div class="card">
-    <div class="card-body">
-      <img src="images/shoes img.webp" class="img-fluid rounded mb-3" alt="">
-      <h5 class="card-title">Rs 1,200 </h5>
-      <p class="card-text">Sport Shoes comfortable , Breathable  fly knit upper super soft.</p>
-      <p style="font-weight: bold; color: gray;">Delivered in 3-4 Days</p>
-      <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-      <a href="#" class="btn btn-primary">Buy Now</a>
-    </div>
-  </div>  
-
-   card 4
-   <div class="card">
-    <div class="card-body">
-      <img src="images/headset img.jpg" class="img-fluid rounded mb-3" alt="">
-      <h5 class="card-title">Rs 2,000 </h5>
-      <p class="card-text">Boost Pulse Bluetooth Headphone Gaming Headphones.</p>
-      <p style="font-weight: bold; color: gray;">Delivered in 2-5 Days</p>
-      <a href="#" class="btn btn-primary" onclick="cartbtn()">Add Card</a>
-      <a href="#" class="btn btn-primary">Buy Now</a>
-    </div>
-  </div>  
-
-</div> -->
   <!--------------- cards end ----------------->
 
   <!--------------- footer start ----------------->
@@ -254,6 +113,6 @@
   </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

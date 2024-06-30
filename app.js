@@ -52,19 +52,3 @@ loginbtn.addEventListener('click',()=>{
 accountbtn.addEventListener('click',()=>{
     window.location.href = 'account.html'
 })
-
-// logout button
-var logoutbtn = document.getElementById('logoutbtn')
-function logoutbtn(){
-    window.close()
-}
-
-
-// Cards Functionality Start
-
-// Cards Functionality End
-
-
-// add to cart Functionality Start
-
-// add to cart Functionality End
