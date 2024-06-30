@@ -60,11 +60,11 @@ function logoutbtn(){
 }
 
 
-// Cards Functionality start
+// Cards Functionality Start
 
-// Cards Functionality end
+// Cards Functionality End
 
 
-// add to cart Functionality start
+// add to cart Functionality Start
 
-// add to cart Functionality end
+// add to cart Functionality End
