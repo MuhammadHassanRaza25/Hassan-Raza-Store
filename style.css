@@ -3,8 +3,6 @@
     background-color: #f4f4f4; 
     display: flex; 
     justify-content: center;
-    align-items: center;
-    height: 90vh;
     font-family: sans-serif;
 }
 .loginHeading{
@@ -19,6 +17,7 @@
     text-align: center;
     border-radius: 20px;
     padding: 20px;
+    margin-top: 4%;
 }
 .inpDiv{
     margin-top:20%;
@@ -83,8 +82,6 @@
     background-color: #f4f4f4; 
     display: flex; 
     justify-content: center;
-    align-items: center;
-    height: 90vh;
     font-family: sans-serif;
 }
 .accountHeading{
@@ -95,10 +92,11 @@
     background-color: white;
     border: 1px solid rgb(38, 38, 247);
     width: 420px;
-    height: 70vh;
+    height: 75vh;
     text-align: center;
     border-radius: 20px;
     padding: 20px;
+    margin-top: 3%;
 }
 .inpDiv{
     margin-top:20%;
@@ -131,6 +129,27 @@
     transition: all 0.5s;
 }
 .donebtn:hover{
+    background-color: white;
+    color: rgb(38, 38, 247) ;
+    border: 1px solid rgb(38, 38, 247) ;
+    transition: all 0.5s;
+}
+.gotobtn{
+    padding: 12px;
+    border: none;
+    width: 80%;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgb(38, 38, 247) ;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: all 0.5s;
+}
+.gotobtn:hover{
     background-color: white;
     color: rgb(38, 38, 247) ;
     border: 1px solid rgb(38, 38, 247) ;
@@ -173,12 +192,24 @@
     margin-bottom: 15%;
 }
 .logoutbtn{
+    font-size: 17px;
     border: none;
     width: 100px;
     padding: 5px;
     background-color: rgb(0, 72, 255);
     color: white;
     border-radius: 5px;
+}
+.select{
+    font-size: 17px;
+    border: none;
+    padding: 5px;
+    background-color: rgb(0, 72, 255);
+    color: white;
+    border-radius: 5px;
+}
+.select:focus{
+    outline: none;
 }
 /* navbar */
 
@@ -216,11 +247,10 @@
 .footer{
     padding: 40px;
     background-color: rgb(61, 115, 250);
-    border-top: 2px solid #AAB8C2;
+    border-top: 3px solid #AAB8C2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
     margin-top: 8%;
 }
 .aboutus h2{
@@ -229,6 +259,7 @@
 }
 .aboutus p{
     color: white;
+    font-size: 13px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .followus h2{
@@ -260,21 +291,54 @@
 .contactus h3{
     text-align: center;
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 8%;
 }
 #copyright{
     color: white;
+    font-size: 15px;
 }
 /* footer */
 /* dashboard page end */
-
-@media(max-width:550px){
-    .footer{
-        text-align: center;
-        row-gap: 20px;
+@media(max-width:1024px){
+    .carousel-item img{
+        height: 300px;
+       }
+}
+@media(max-width:660px){
+    .navbar-brand{
+        font-size: 20px;
+     }
+    .carousel-item img{
+        height: 200px;
+       }
+}
+@media(max-width:435px){
+    .carousel-item img{
+        height: 150px;
     }
-    /* .followus{
-        margin-top: 15%;
-    } */
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        row-gap: 18px;
+    }
+    .aboutus p{
+        font-size: 10px;
+    }
+    .followus h2{
+        font-size: 30px;
+    }
+    .followus a{
+        font-size: 23px;
+        margin-left: 4%;
+    }
+    .aboutus h2{
+        font-size: 30px;
+    }
+    .contactus h2{
+        font-size: 30px;
+    }
+    #copyright{
+        font-size: 10px;
+    }
 }
