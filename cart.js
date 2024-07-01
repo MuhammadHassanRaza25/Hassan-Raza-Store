@@ -1,5 +1,4 @@
 var cardsDiv = document.getElementById('cardsDiv')
-var cartbtn = document.getElementById('cartbtn')
 var select = document.getElementById('select')
 var logoutbtn = document.getElementById('logoutbtn')
 
@@ -367,9 +366,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png",
              "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/2.png",
-             "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/3.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/thumbnail.png"
        },
@@ -429,9 +426,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/1.png",
              "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/2.png",
-             "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png"
        },
@@ -491,9 +486,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/1.png",
-             "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/2.png",
-             "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/3.png"
+             "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/3.png",
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png"
        },
@@ -553,9 +546,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/1.png",
-             "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/2.png",
-             "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/3.png"
+             "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/3.png",
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/thumbnail.png"
        },
@@ -615,9 +606,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/1.png",
              "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/2.png",
-             "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/3.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png"
        },
@@ -677,9 +666,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/1.png",
              "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/2.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/3.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png"
        },
@@ -740,8 +727,6 @@ var data = {
           },
           "images":[
              "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/3.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png"
        },
@@ -801,9 +786,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/1.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/2.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/3.png"
+             "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/3.png",
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20African%20Cherry/thumbnail.png"
        },
@@ -864,8 +847,6 @@ var data = {
           },
           "images":[
              "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/1.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/2.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/3.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/furniture/Knoll%20Saarinen%20Executive%20Conference%20Chair/thumbnail.png"
        },
@@ -925,9 +906,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/1.png",
              "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/2.png",
-             "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/3.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png"
        },
@@ -1161,7 +1140,6 @@ var data = {
           },
           "images":[
              "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/1.png",
-             "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/2.png"
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/groceries/Chicken%20Meat/thumbnail.png"
        },
@@ -1684,10 +1662,7 @@ var data = {
              "qrCode":"https://cdn.dummyjson.com/public/qr-code.png"
           },
           "images":[
-             "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/1.png",
-             "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/2.png",
-             "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/3.png",
-             "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/4.png"
+             "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/4.png",
           ],
           "thumbnail":"https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/thumbnail.png"
        },
@@ -1815,7 +1790,6 @@ var data = {
 
 
 // select functionality Start //
-
 var uniqueCategory = []
 for (let i = 0; i < data.products.length; i++) {
     if(!uniqueCategory.includes(data.products[i].category)){
@@ -1839,27 +1813,29 @@ for (let i = 0; i < data.products.length; i++) {
 // if main ye bola hai ke uniqueCategory wale array main dekho ke ye jo value a rhi hai
 // agar ye value nahi hai means(!) to option show kardo.
 // end main array main value push ke hai kiunke sara kaam array main ho rha h.
-
 // select functionality End //
 
 
 // Show Cards Functionality Start //
-
 for (let i = 2; i < data.products.length; i++) {
    // console.log(data.products[i].title);
         cardsDiv.innerHTML += `
         <div class="card" data-aos="fade-up">
       <img src="${data.products[i].images}" alt="image">
-      <h5 class="cardTitle">${data.products[i].title}</h5>
+      <h5 class="cardTitle" id="cardTitle">${data.products[i].title}</h5>
       <div class="cardText">
         <p>${data.products[i].description}</p>
       </div>
-      <h4>Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
-      <button class="cartbtn" id="cartbtn">Add to Cart</button>
+      <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+      <button class="cartbtn" onclick="cartbtn()">Add to Cart</button>
     </div>`
    }
-
 //summary
-// loop main 2 isliye likha hai kiunke product total 30 hain end row main 4 ki jaga 2 card arahe thy.
-
+// loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
 // Show Cards Functionality End //
+
+// Add to Card Functionality Start
+// function cartbtn() {
+   
+// }
+// Add to Card Functionality End
