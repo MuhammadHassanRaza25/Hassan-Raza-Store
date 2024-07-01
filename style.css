@@ -309,14 +309,17 @@
 }
 .followus #fb:hover{
     color:rgb(24, 24, 238);
+    text-shadow: 0px 0px 5px rgb(1, 225, 255);
     transition: all 0.5s;
 }
 .followus #wh:hover{
-    color: green;
+    color: rgb(4, 238, 4);
+    text-shadow: 0px 0px 5px rgb(128, 255, 54);
     transition: all 0.5s;
 }
 .followus #twit:hover{
     color:rgb(24, 24, 238);
+    text-shadow: 0px 0px 5px rgb(1, 225, 255);
     transition: all 0.5s;
 }
 .contactus h2{

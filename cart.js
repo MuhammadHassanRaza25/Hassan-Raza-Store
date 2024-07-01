@@ -1814,7 +1814,8 @@ var data = {
  }
 
 
-// select functionality Start
+// select functionality Start //
+
 var uniqueCategory = []
 for (let i = 0; i < data.products.length; i++) {
     if(!uniqueCategory.includes(data.products[i].category)){
@@ -1822,29 +1823,43 @@ for (let i = 0; i < data.products.length; i++) {
      select.innerHTML += `<option value="${optionValue}">${optionValue}</option>`
      uniqueCategory.push(optionValue)
     }
-    
 }
+
+// select option category functionality
+// select.addEventListener('click',()=>{
+//    for (let i = 0; i < select.length; i++) {
+//    console.log(select.childNodes[1]);
+// }
+// })
+// console.log(select.childNodes[1]);
+// select option category functionality
+
 //summary//
 //include agar value hogi true nahi to false return karta hai.
 // if main ye bola hai ke uniqueCategory wale array main dekho ke ye jo value a rhi hai
 // agar ye value nahi hai means(!) to option show kardo.
 // end main array main value push ke hai kiunke sara kaam array main ho rha h.
-// select functionality End
+
+// select functionality End //
 
 
-// Show Cards Functionality Start
-// for (let i = 0; i < data.products.length; i++) {
-//      console.log(data.products[i].title);
-//      cardsDiv.innerHTML += `
-//      <div class="card" style="width: 18rem;">
-//       <img src="${data.products[i].images}" class="card-img-top" alt="...">
-//       <div class="card-body">
-//         <h5 class="card-title">${data.products[i].title}</h5>
-//         <p class="card-text">${data.products[i].description}</p>
-//         <h4>${data.products[i].price}</h4>
-//         <p>${data.products[i].category}</p>
-//         <a href="#" id="cartbtn" class="btn btn-primary cartbtn">Add to Cart</a>
-//       </div>
-//     </div>`
-// }
-// Show Cards Functionality End
+// Show Cards Functionality Start //
+
+for (let i = 2; i < data.products.length; i++) {
+   // console.log(data.products[i].title);
+        cardsDiv.innerHTML += `
+        <div class="card" data-aos="fade-up">
+      <img src="${data.products[i].images}" alt="image">
+      <h5 class="cardTitle">${data.products[i].title}</h5>
+      <div class="cardText">
+        <p>${data.products[i].description}</p>
+      </div>
+      <h4>Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+      <button class="cartbtn" id="cartbtn">Add to Cart</button>
+    </div>`
+   }
+
+//summary
+// loop main 2 isliye likha hai kiunke product total 30 hain end row main 4 ki jaga 2 card arahe thy.
+
+// Show Cards Functionality End //
