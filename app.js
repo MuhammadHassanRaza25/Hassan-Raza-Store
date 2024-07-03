@@ -6,6 +6,14 @@ function donebtn(){
     var username = document.getElementById('username')
     var email = document.getElementById('email')
     var password = document.getElementById('password')
+
+    if(username.value == '' && email.value == '' && password.value == ''){
+        Swal.fire({
+        title: "Please fill this fields",
+        icon: "info"
+      });
+    }
+    else{
     localStorage.setItem(`name`,username.value) 
     localStorage.setItem(`email`,email.value)
     localStorage.setItem(`password`,password.value)
@@ -13,9 +21,6 @@ function donebtn(){
         title: "Account Created",
         icon: "success"
       });
-    username.value = ''
-    email.value = ''
-    password.value = ''
 
     // creating new button
     var divbtn = document.getElementById('divbtn')
@@ -24,6 +29,11 @@ function donebtn(){
     goto.addEventListener('click',()=>{
         window.location.href = 'index.html'
     })
+    }
+
+    username.value = ''
+    email.value = ''
+    password.value = ''
 }
 
 // login button functionality
