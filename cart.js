@@ -1799,17 +1799,8 @@ for (let i = 0; i < data.products.length; i++) {
     }
 }
 
-// select option category functionality
-// select.addEventListener('click',()=>{
-//    for (let i = 0; i < select.length; i++) {
-//    console.log(select.childNodes[1]);
-// }
-// })
-// console.log(select.childNodes[1]);
-// select option category functionality
-
 //summary//
-//include agar value hogi true nahi to false return karta hai.
+// include: agar value hogi true nahi to false return karta hai.
 // if main ye bola hai ke uniqueCategory wale array main dekho ke ye jo value a rhi hai
 // agar ye value nahi hai means(!) to option show kardo.
 // end main array main value push ke hai kiunke sara kaam array main ho rha h.
@@ -1834,8 +1825,8 @@ for (let i = 2; i < data.products.length; i++) {
 // loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
 // Show Cards Functionality End //
 
-// Add to Card Functionality Start
+// Add to Cart Functionality Start
 // function cartbtn() {
    
 // }
-// Add to Card Functionality End
+// Add to Cart Functionality End
