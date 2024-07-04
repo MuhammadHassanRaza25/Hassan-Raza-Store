@@ -21,21 +21,17 @@ function donebtn(){
         title: "Account Created",
         icon: "success"
       });
-
-    // creating new button
-    var divbtn = document.getElementById('divbtn')
-    divbtn.innerHTML += `<button class="gotobtn" id="goto">◀ Go to Login Page</button>`
-    var goto  = document.getElementById('goto')
-    goto.addEventListener('click',()=>{
-        window.location.href = 'index.html'
-    })
+      username.value = ''
+      email.value = ''
+      password.value = ''
     }
-
-    username.value = ''
-    email.value = ''
-    password.value = ''
 }
 
+// go to login page button
+function gotobtn(){
+     window.location.href = 'index.html'
+}
+   
 // login button functionality
 loginbtn.addEventListener('click',()=>{
     var getemail = localStorage.getItem('email')
