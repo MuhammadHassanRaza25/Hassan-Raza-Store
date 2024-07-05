@@ -1788,8 +1788,7 @@ var data = {
     "limit":30
  }
 
-
-// select functionality Start //
+ // select functionality Start //
 var uniqueCategory = []
 for (let i = 0; i < data.products.length; i++) {
     if(!uniqueCategory.includes(data.products[i].category)){
@@ -1798,43 +1797,58 @@ for (let i = 0; i < data.products.length; i++) {
      uniqueCategory.push(optionValue)
     }
 }
+//summary: include means: agar value hogi true nahi to false return karta hai. if main ye bola hai ke uniqueCategory wale array main dekho ke ye jo value a rhi hai agar ye value nahi hai means(!) to option show kardo. end main array main value push ke hai kiunke sara kaam array main ho rha h.
 
-//summary//
-// include: agar value hogi true nahi to false return karta hai.
-// if main ye bola hai ke uniqueCategory wale array main dekho ke ye jo value a rhi hai
-// agar ye value nahi hai means(!) to option show kardo.
-// end main array main value push ke hai kiunke sara kaam array main ho rha h.
-// select functionality End //
+// show selected cards start
+select.addEventListener('change',()=>{
+   cardsDiv.innerHTML = ''
+   var selectedOpt = select.value
 
-
-// Show Cards Functionality Start //
-for (let i = 2; i < data.products.length; i++) {
-   // console.log(data.products[i].title);
-        cardsDiv.innerHTML += `
-        <div class="card" data-aos="fade-up">
+   for (let i = 2; i < data.products.length; i++) {
+   if(selectedOpt == data.products[i].category){
+      cardsDiv.innerHTML += `
+      <div class="card" data-aos="fade-up">
       <img src="${data.products[i].images}" alt="image">
       <h5 class="cardTitle" id="cardTitle">${data.products[i].title}</h5>
       <div class="cardText">
-        <p>${data.products[i].description}</p>
+      <p>${data.products[i].description}</p>
       </div>
       <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
-      <button class="cartbtn" id="cartbtn">Add to Cart</button>
+      <button class="cartbtn" id="${i}">Add to Cart</button>
     </div>`
    }
-//summary
-// loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
+}
+})
+// show selected cards end
+// select functionality End //
+
+// Show Cards Functionality Start //
+for (let i = 2; i < data.products.length; i++) {
+        cardsDiv.innerHTML += `
+      <div class="card" data-aos="fade-up">
+      <img src="${data.products[i].images}" alt="image">
+      <h5 class="cardTitle" id="cardTitle">${data.products[i].title}</h5>
+      <div class="cardText">
+      <p>${data.products[i].description}</p>
+      </div>
+      <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+      <button class="cartbtn" id="${i}">Add to Cart</button>
+    </div>`
+   }
+// summary: loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
 // Show Cards Functionality End //
 
 // Add to Cart Functionality Start
-// var cartbtn = document.getElementById('cartbtn')
-// for(let i = 2; i < data.products.length; i++) {
-//    cartbtn.addEventListener('click',()=>{
-//       console.log(`${data.products[i].title}`);
-//    })
-// }
-// cartbtn.addEventListener('click',()=>{
-//    for(let i = 2; i < data.products.length; i++) {
-//           console.log(`${data.products[2].title}`);
-//    }
-// })
+for (let i = 2; i < data.products.length; i++) {
+   var cartbtn = document.getElementById(`${i}`)
+    cartbtn.addEventListener('click',()=>{
+         // console.log(data.products[i].title);
+         Swal.fire({
+            title: `${data.products[i].title}<br>Price: ${data.products[i].price}<br>Rating: <i class="bi bi-star-fill"></i> ${data.products[i].rating}`,
+            text: `${data.products[i].description}`,
+            icon: "success"
+          });
+      })
+}
+// summary: cart button ki id loop ke numbers hain.
 // Add to Cart Functionality End

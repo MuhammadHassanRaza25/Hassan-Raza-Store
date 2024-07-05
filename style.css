@@ -136,8 +136,15 @@
 /* account page end */
 
 /* dashboard page start */
-
-/* navbar */
+::-webkit-scrollbar{
+    background-color: gainsboro;
+    width: 11px;
+    height: 20px;
+ }
+ ::-webkit-scrollbar-thumb{
+    background-color: blue;
+ }
+/* navbar start*/
 .navbar{
     padding: 10px;
     border-bottom: 1px solid #AAB8C2;
@@ -149,6 +156,12 @@
 .navbar-brand{
    font-size: 30px;
    font-weight: bold;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.navbar-brand img{
+    margin-bottom: 1%;
 }
 .navbar-nav{
     display: flex;
@@ -164,10 +177,6 @@
 .nav-link:hover{
     color: rgb(0, 72, 255);
     transition: all 0.5s;
-}
-.cart{
-    font-size:x-large;
-    margin-bottom: 15%;
 }
 .logoutbtn{
     font-size: 17px;
@@ -195,7 +204,7 @@
    background-color: rgb(57, 113, 255);
    font-weight: bold;
 }
-/* navbar */
+/* navbar end*/
 
 /* slider */
 .carousel-item img{
@@ -239,7 +248,6 @@
     align-items: center;
 }
 .cardSpan{
-    /* margin-left: 20%; */
     font-weight: normal;
     font-size: 20px;
 }
@@ -327,6 +335,7 @@
 }
 /* footer */
 /* dashboard page end */
+
 @media(max-width:1024px){
     .carousel-item img{
         height: 300px;
@@ -341,8 +350,17 @@
        }
 }
 @media(max-width:435px){
+    .loginForm{
+        margin-top: 10%;
+    }
+    .accountForm{
+        margin-top: 10%;
+    }
     .carousel-item img{
         height: 150px;
+    }
+    .card{
+        margin-bottom: 8%;
     }
     .footer{
         flex-direction: column;
