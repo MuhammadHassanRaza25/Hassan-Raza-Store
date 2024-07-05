@@ -1818,7 +1818,7 @@ for (let i = 2; i < data.products.length; i++) {
         <p>${data.products[i].description}</p>
       </div>
       <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
-      <button class="cartbtn" onclick="cartbtn()">Add to Cart</button>
+      <button class="cartbtn" id="cartbtn">Add to Cart</button>
     </div>`
    }
 //summary
@@ -1826,7 +1826,15 @@ for (let i = 2; i < data.products.length; i++) {
 // Show Cards Functionality End //
 
 // Add to Cart Functionality Start
-// function cartbtn() {
-   
+// var cartbtn = document.getElementById('cartbtn')
+// for(let i = 2; i < data.products.length; i++) {
+//    cartbtn.addEventListener('click',()=>{
+//       console.log(`${data.products[i].title}`);
+//    })
 // }
+// cartbtn.addEventListener('click',()=>{
+//    for(let i = 2; i < data.products.length; i++) {
+//           console.log(`${data.products[2].title}`);
+//    }
+// })
 // Add to Cart Functionality End

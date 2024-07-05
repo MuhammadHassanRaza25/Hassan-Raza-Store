@@ -6,7 +6,6 @@ function donebtn(){
     var username = document.getElementById('username')
     var email = document.getElementById('email')
     var password = document.getElementById('password')
-
     if(username.value == '' && email.value == '' && password.value == ''){
         Swal.fire({
         title: "Please fill this fields",
@@ -24,12 +23,11 @@ function donebtn(){
       username.value = ''
       email.value = ''
       password.value = ''
+      setTimeout(() => {
+        window.location.href = 'index.html'
+      }, 1000);
+    
     }
-}
-
-// go to login page button
-function gotobtn(){
-     window.location.href = 'index.html'
 }
    
 // login button functionality
