@@ -1,12 +1,6 @@
 var cardsDiv = document.getElementById('cardsDiv')
 var select = document.getElementById('select')
-var logoutbtn = document.getElementById('logoutbtn')
 
-// logout button
-logoutbtn.addEventListener('click',()=>{
-     window.close()
-})
-   
 // Cards Functionality Start
 var data = {
     "products":[
