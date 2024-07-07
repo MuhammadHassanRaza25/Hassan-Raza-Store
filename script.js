@@ -1,5 +1,6 @@
 var cardsDiv = document.getElementById('cardsDiv')
 var select = document.getElementById('select')
+var miniCartbody = document.getElementById('miniCartbody')
 
 // Cards Functionality Start
 var data = {
@@ -1799,17 +1800,20 @@ select.addEventListener('change',()=>{
    var selectedOpt = select.value
 
    for (let i = 2; i < data.products.length; i++) {
-   if(selectedOpt == data.products[i].category){
+   if(selectedOpt == 'All Products' || selectedOpt == data.products[i].category){
       cardsDiv.innerHTML += `
       <div class="card" data-aos="fade-up">
-      <img src="${data.products[i].images}" alt="image">
-      <h5 class="cardTitle" id="cardTitle">${data.products[i].title}</h5>
-      <div class="cardText">
-      <p>${data.products[i].description}</p>
-      </div>
-      <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
-      <button class="cartbtn" id="${i}">Add to Cart</button>
-    </div>`
+          <img src="${data.products[i].images}" alt="image">
+          <h5 class="cardTitle" id="cardTitle">${data.products[i].title}</h5>
+          <div class="cardText">
+          <p>${data.products[i].description}</p>
+          </div>
+          <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+          <div class="cardbuttons">
+            <button class="cartbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Cart</button>
+            <button class="cartbtn" id="${i}">Add to Cart</button>
+          </div>
+        </div>`
    }
 }
 })
@@ -1820,14 +1824,17 @@ select.addEventListener('change',()=>{
 for (let i = 2; i < data.products.length; i++) {
         cardsDiv.innerHTML += `
       <div class="card" data-aos="fade-up">
-      <img src="${data.products[i].images}" alt="image">
-      <h5 class="cardTitle" id="cardTitle">${data.products[i].title}</h5>
-      <div class="cardText">
-      <p>${data.products[i].description}</p>
-      </div>
-      <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
-      <button class="cartbtn" id="${i}">Add to Cart</button>
-    </div>`
+          <img src="${data.products[i].images}" alt="image">
+          <h5 class="cardTitle" id="cardTitle">${data.products[i].title}</h5>
+          <div class="cardText">
+          <p>${data.products[i].description}</p>
+          </div>
+          <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+          <div class="cardbuttons">
+            <button class="cartbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Cart</button>
+            <button class="cartbtn" id="${i}">Add to Cart</button>
+          </div>
+        </div>`
    }
 // summary: loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
 // Show Cards Functionality End //
@@ -1838,11 +1845,37 @@ for (let i = 2; i < data.products.length; i++) {
     cartbtn.addEventListener('click',()=>{
          // console.log(data.products[i].title);
          Swal.fire({
-            title: `${data.products[i].title}<br>Price: ${data.products[i].price}<br>Rating: <i class="bi bi-star-fill"></i> ${data.products[i].rating}`,
-            text: `${data.products[i].description}`,
-            icon: "success"
-          });
+               title: 'Add to Cart Successfuly',
+               icon: "success"
+             });
+
+          miniCartbody.innerHTML += `
+          <div class="minicart">
+      
+                <div class="imagediv">
+                  <img src="${data.products[i].images}" alt="">
+                </div>
+      
+                <div class="detailsdiv">
+                  <h5 class="miniHeading">${data.products[i].title}</h5>
+                  <p class="miniDis">${data.products[i].description}</p>
+                  <h4 class="miniprice">Price: ${data.products[i].price}<span class="minispan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+                
+                  <div class="qntorDeldiv">
+                    <select class="select2">
+                      <option value="Quantity">Quantity</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+          `
       })
 }
-// summary: cart button ki id loop ke numbers hain.
+// summary: cart button ki id loop ke numbers hain. or hamne offcanvas ke andar ye kam push kia hai.
 // Add to Cart Functionality End

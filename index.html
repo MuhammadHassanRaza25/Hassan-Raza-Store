@@ -33,6 +33,7 @@
               <li class="nav-item">
                 <select id="select" class="select">
                   <option disabled selected>Select Category</option>
+                  <option value="All Products">All Products</option>
                 </select>
               </li>
             </ul>
@@ -70,11 +71,25 @@
     </div>
     <!-- slider end -->
 
+    <!-- offcanvas start -->
+     <!-- button ko display none kia hai upper button lagana important hai -->
+    <button style="display: none;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Cart</button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Hassan Raza Store Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" id="miniCartbody">
+        
+      </div>
+    </div>
+    <!-- offcanvas end -->
+
   <!--------------- cards start ----------------->
     <h1 class="cardheading" data-aos="zoom-in">Latest <span class="text-primary">Products</span></h1>
     <hr class="w-25 text-primary m-auto mb-5 mt-3">
    <div id="cardsDiv" class="cardP" data-aos="fade-up">
-
+       
   </div>
   <!--------------- cards end ----------------->
 
