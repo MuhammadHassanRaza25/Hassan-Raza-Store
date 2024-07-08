@@ -1850,7 +1850,7 @@ for (let i = 2; i < data.products.length; i++) {
              });
 
           sideCartbody.innerHTML += `
-          <div class="minicart">
+          <div class="minicart" id="minicart">
       
                 <div class="imagediv">
                   <img src="${data.products[i].images}" alt="">
@@ -1870,7 +1870,7 @@ for (let i = 2; i < data.products.length; i++) {
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select>
-                    <span class="deleteicon" id="${'deleteicon'+i}"><i class="bi bi-trash3-fill"></i></span>
+                    <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
                   </div>
                 </div>
               </div>

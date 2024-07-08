@@ -4,7 +4,7 @@
     margin-top: 5%;
     z-index: 999999;
 }
-/* main div start */
+/* main div start:parent of imagediv & detailsdiv */
 .minicart{
     display: flex;
     justify-content: space-between;
@@ -14,18 +14,25 @@
     gap:10px;
     margin-bottom: 2%;
 }
-/* main div end */
+/* main div start:parent of imagediv & detailsdiv */
+
 /* img div start */
 .imagediv{
-    width:55%;
+    width:20%;
     height: 21.5vh;
 }
 .imagediv img{
   width:100%;
 }
 /* img div end */
+
+/*details div start: all details about cart in this div*/
+.detailsdiv{
+    width:80%;
+}
+/*details div start: all details about cart in this div*/
 .miniHeading{
-    font-size: 17px;
+    font-size: 15px;
 }
 .miniDis{
     height: 7vh;
@@ -78,7 +85,6 @@
    font-weight: bold;
 }
 /* div end */
-
 /* offcanvas end */
 
 /* dashboard page start */
