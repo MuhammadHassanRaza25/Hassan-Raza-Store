@@ -1,6 +1,6 @@
 var cardsDiv = document.getElementById('cardsDiv')
 var select = document.getElementById('select')
-var miniCartbody = document.getElementById('miniCartbody')
+var sideCartbody = document.getElementById('sideCartbody')
 
 // Cards Functionality Start
 var data = {
@@ -1836,7 +1836,7 @@ for (let i = 2; i < data.products.length; i++) {
           </div>
         </div>`
    }
-// summary: loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
+// summary: cart button ki id loop ke numbers hain get karne ke liye loop chalaya hai. loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
 // Show Cards Functionality End //
 
 // Add to Cart Functionality Start
@@ -1849,7 +1849,7 @@ for (let i = 2; i < data.products.length; i++) {
                icon: "success"
              });
 
-          miniCartbody.innerHTML += `
+          sideCartbody.innerHTML += `
           <div class="minicart">
       
                 <div class="imagediv">
@@ -1870,12 +1870,17 @@ for (let i = 2; i < data.products.length; i++) {
                       <option value="4">4</option>
                       <option value="5">5</option>
                     </select>
-                    <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
+                    <span class="deleteicon" id="${'deleteicon'+i}"><i class="bi bi-trash3-fill"></i></span>
                   </div>
                 </div>
               </div>
           `
       })
 }
-// summary: cart button ki id loop ke numbers hain. or hamne offcanvas ke andar ye kam push kia hai.
+// summary: cart button ki id loop ke numbers hain get karne ke liye loop chalaya hai. 
+// or hamne offcanvas ki body ko get karke body ke andar ye kam push kia hai.
 // Add to Cart Functionality End
+
+// delete item from cart start
+
+// delete item from cart end
