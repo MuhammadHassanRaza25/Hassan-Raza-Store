@@ -1799,7 +1799,7 @@ select.addEventListener('change',()=>{
    cardsDiv.innerHTML = ''
    var selectedOpt = select.value
 
-   for (let i = 2; i < data.products.length; i++) {
+   for (let i = 0; i < data.products.length; i++) {
    if(selectedOpt == 'All Products' || selectedOpt == data.products[i].category){
       cardsDiv.innerHTML += `
       <div class="card" data-aos="fade-up">
@@ -1811,17 +1811,58 @@ select.addEventListener('change',()=>{
           <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
           <div class="cardbuttons">
             <button class="cartbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Cart</button>
-            <button class="cartbtn" id="${i}">Add to Cart</button>
+            <button class="cartbtn" id="cart" data-index="${i}">Add to Cart</button>
           </div>
         </div>`
    }
 }
+//this is add to cart same functionality but some changes
+var cart = document.querySelectorAll('#cart')
+   for (let i = 0; i < cart.length; i++) {
+      cart[i].addEventListener('click',(e)=>{
+         const productIndex = e.target.getAttribute('data-index');
+            Swal.fire({
+                  title: 'Add to Cart Successfuly',
+                  icon: "success"
+                });
+         
+            sideCartbody.innerHTML += `
+               <div class="minicart" id="minicart">
+               
+                  <div class="imagediv">
+                     <img src="${data.products[productIndex].images}" alt="">
+                   </div>
+               
+                   <div class="detailsdiv">
+                     <h5 class="miniHeading">${data.products[productIndex].title}</h5>
+                     <p class="miniDis">${data.products[productIndex].description}</p>
+                     <h4 class="miniprice">Price: ${data.products[productIndex].price}<span class="minispan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+                   
+                     <div class="qntorDeldiv">
+                       <select class="select2">
+                         <option value="Quantity">Quantity</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                       </select>
+                       <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
+                     </div>
+                   </div>
+                  </div>
+               `
+               })
+   }
+// this is add to cart same functionality but some changes end
 })
 // show selected cards end
+
 // select functionality End //
 
+
 // Show Cards Functionality Start //
-for (let i = 2; i < data.products.length; i++) {
+for (let i = 0; i < data.products.length; i++) {
         cardsDiv.innerHTML += `
       <div class="card" data-aos="fade-up">
           <img src="${data.products[i].images}" alt="image">
@@ -1832,30 +1873,29 @@ for (let i = 2; i < data.products.length; i++) {
           <h4 class="priceNrating">Price: ${data.products[i].price}<span class="cardSpan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
           <div class="cardbuttons">
             <button class="cartbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View Cart</button>
-            <button class="cartbtn" id="${i}">Add to Cart</button>
+            <button class="cartbtn" id="cart">Add to Cart</button>
           </div>
         </div>`
    }
-// summary: cart button ki id loop ke numbers hain get karne ke liye loop chalaya hai. loop main 2 isliye likha hai kiunke product total 30 hain or har row main 4cards hain end row main 4 ki jaga 2 card arahe thy.
 // Show Cards Functionality End //
 
 // Add to Cart Functionality Start
-for (let i = 2; i < data.products.length; i++) {
-   var cartbtn = document.getElementById(`${i}`)
-    cartbtn.addEventListener('click',()=>{
-         // console.log(data.products[i].title);
+var cart = document.querySelectorAll('#cart')
+for (let i = 0; i < cart.length; i++) {
+   cart[i].addEventListener('click',()=>{
+          // console.log(data.products[i].title);
          Swal.fire({
                title: 'Add to Cart Successfuly',
                icon: "success"
              });
-
-          sideCartbody.innerHTML += `
-          <div class="minicart" id="minicart">
       
-                <div class="imagediv">
+         sideCartbody.innerHTML += `
+            <div class="minicart" id="minicart">
+            
+               <div class="imagediv">
                   <img src="${data.products[i].images}" alt="">
                 </div>
-      
+            
                 <div class="detailsdiv">
                   <h5 class="miniHeading">${data.products[i].title}</h5>
                   <p class="miniDis">${data.products[i].description}</p>
@@ -1873,13 +1913,13 @@ for (let i = 2; i < data.products.length; i++) {
                     <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
                   </div>
                 </div>
-              </div>
-          `
-      })
+               </div>
+            `
+            })
 }
-// summary: cart button ki id loop ke numbers hain get karne ke liye loop chalaya hai. 
-// or hamne offcanvas ki body ko get karke body ke andar ye kam push kia hai.
+//summary: data.products[i].title waghera jo show karwaya hai it means loop cartbutton ki lenght pe chalaya hai jitne cards honge otne hi cartbuttons honge.
 // Add to Cart Functionality End
+
 
 // delete item from cart start
 
