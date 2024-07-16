@@ -1826,38 +1826,35 @@ var cart = document.querySelectorAll('#cart')
                   icon: "success"
                 });
          
-            sideCartbody.innerHTML += `
-               <div class="minicart" id="minicart">
+                sideCartbody.innerHTML += `
+                <div class="minicart" id="minicart">
+                
+              <div class="imagediv">
+                 <img src="${data.products[productIndex].images}" alt="">
+               </div>
+           
+               <div class="detailsdiv">
+                 <h5 class="miniHeading">${data.products[productIndex].title}</h5>
+                 <p class="miniDis">${data.products[productIndex].description}</p>
+                 <h4 class="miniprice">Price: ${data.products[productIndex].price}<span class="minispan"><i class="bi bi-star-fill"></i> ${data.products[productIndex].rating}</span></h4>
                
-                  <div class="imagediv">
-                     <img src="${data.products[productIndex].images}" alt="">
+                 <div class="qntorDeldiv">
+                   <div class="quantityDiv">
+                     <button class="quantityDivbtn" id="minus">-</button>
+                     <span class="count" id="count">0</span>
+                     <button class="quantityDivbtn" style="font-size: 22px; padding-bottom: 4px;" id="plus">+</button>
                    </div>
-               
-                   <div class="detailsdiv">
-                     <h5 class="miniHeading">${data.products[productIndex].title}</h5>
-                     <p class="miniDis">${data.products[productIndex].description}</p>
-                     <h4 class="miniprice">Price: ${data.products[productIndex].price}<span class="minispan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
-                   
-                     <div class="qntorDeldiv">
-                       <select class="select2">
-                         <option value="Quantity">Quantity</option>
-                         <option value="1">1</option>
-                         <option value="2">2</option>
-                         <option value="3">3</option>
-                         <option value="4">4</option>
-                         <option value="5">5</option>
-                       </select>
-                       <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
-                     </div>
-                   </div>
-                  </div>
-               `
-               })
+                   <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
+                 </div>
+               </div>
+              </div>
+             `
+             abc()
+   })
    }
 // this is add to cart same functionality but some changes end
 })
 // show selected cards end
-
 // select functionality End //
 
 
@@ -1892,33 +1889,56 @@ for (let i = 0; i < cart.length; i++) {
          sideCartbody.innerHTML += `
             <div class="minicart" id="minicart">
             
-               <div class="imagediv">
-                  <img src="${data.products[i].images}" alt="">
-                </div>
-            
-                <div class="detailsdiv">
-                  <h5 class="miniHeading">${data.products[i].title}</h5>
-                  <p class="miniDis">${data.products[i].description}</p>
-                  <h4 class="miniprice">Price: ${data.products[i].price}<span class="minispan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
-                
-                  <div class="qntorDeldiv">
-                    <select class="select2">
-                      <option value="Quantity">Quantity</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                    <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
-                  </div>
-                </div>
+          <div class="imagediv">
+             <img src="${data.products[i].images}" alt="">
+           </div>
+       
+           <div class="detailsdiv">
+             <h5 class="miniHeading">${data.products[i].title}</h5>
+             <p class="miniDis">${data.products[i].description}</p>
+             <h4 class="miniprice">Price: ${data.products[i].price}<span class="minispan"><i class="bi bi-star-fill"></i> ${data.products[i].rating}</span></h4>
+           
+             <div class="qntorDeldiv">
+               <div class="quantityDiv">
+                 <button class="quantityDivbtn" id="minus">-</button>
+                 <span class="count" id="count">0</span>
+                 <button class="quantityDivbtn" style="font-size: 22px; padding-bottom: 4px;" id="plus">+</button>
                </div>
-            `
-            })
+               <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
+             </div>
+           </div>
+          </div>
+         `
+         abc()
+})
 }
 //summary: data.products[i].title waghera jo show karwaya hai it means loop cartbutton ki lenght pe chalaya hai jitne cards honge otne hi cartbuttons honge.
 // Add to Cart Functionality End
+
+
+//Quantity functionality Start
+function abc() {
+var plus = document.getElementById('plus')
+var minus = document.getElementById('minus')
+var count = document.getElementById('count')
+
+var val = 0
+plus.addEventListener('click',()=>{
+   val++
+   if(val > 10){
+      count.innerHTML= val = 10
+   }
+   count.innerHTML = val
+})
+minus.addEventListener('click',()=>{
+   val--
+   if(val < 0){
+      count.innerHTML= val = 0
+   }
+   count.innerHTML= val
+})
+}
+// Quantity functionality End
 
 
 // delete item from cart start

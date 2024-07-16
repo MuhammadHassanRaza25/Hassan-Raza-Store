@@ -73,7 +73,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid blue;
+    border: 1px solid gray;
     width: 45%;
     height: 30px;
     padding: 5px;
@@ -87,7 +87,7 @@
     height: 20px;
     font-weight: bold;
     font-size: 25px;
-    padding-bottom: 6px;
+    padding-bottom: 6.5px;
 }
 .count{
     text-align: center;
