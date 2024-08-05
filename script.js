@@ -1844,7 +1844,7 @@ var cart = document.querySelectorAll('#cart')
                      <span class="count" id="count">0</span>
                      <button class="quantityDivbtn" style="font-size: 22px; padding-bottom: 4px;" id="plus">+</button>
                    </div>
-                   <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
+                   <span class="deleteicon" onclick="delItem(this)"><i class="bi bi-trash3-fill"></i></span>
                  </div>
                </div>
               </div>
@@ -1904,7 +1904,7 @@ for (let i = 0; i < cart.length; i++) {
                  <span class="count" id="count">0</span>
                  <button class="quantityDivbtn" style="font-size: 22px; padding-bottom: 4px;" id="plus">+</button>
                </div>
-               <span class="deleteicon" id="deleteicon"><i class="bi bi-trash3-fill"></i></span>
+               <span class="deleteicon" onclick="delItem(this)"><i class="bi bi-trash3-fill"></i></span>
              </div>
            </div>
           </div>
@@ -1942,5 +1942,8 @@ minus.addEventListener('click',()=>{
 
 
 // delete item from cart start
-
+let delItem = (e)=>{
+   e.parentNode.parentNode.parentNode.remove()
+}
+//summary: (this) onclick me dia hai or (e) se icon wala span get karke uske parents ko get kia and then remove kar dia.
 // delete item from cart end
